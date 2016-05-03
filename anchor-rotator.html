@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="anchors.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="anchor-rotator-style.css">
+<link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>Anchor-Rotator - The Ultimate Rotator | Magdum</title>
+
+</head>
+<body onload = "errorHandling('')">
+
+    
+<div class="jumbotron">
+    <h1 style="margin-left:15px; color:#ffc2e0;">Anchor-Rotator - The Ultimate Rotator</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>Liczba anchorów - Polski: <script type="text/javascript">document.write(originalAnchorList.length)</script></p>
+            <p>Liczba anchorów - Francuski: <script type="text/javascript">document.write(frAnchorList.length)</script></p>
+            <p>Liczba anchorów - Angielski: <script type="text/javascript">document.write(engAnchorList.length)</script></p>
+            <p>Liczba anchorów - Niemiecki: <script type="text/javascript">document.write(deAnchorList.length)</script></p>
+            <p>Liczba anchorów - Czeski: <script type="text/javascript">document.write(czAnchorList.length)</script></p><br>
+        </div>
+        
+    </div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <p><b>Wpisz liczbę żądanych kombinacji:</b></p>
+        <form name = "inputForm">
+            <input  name = "inputArea" ></input ><br><br>
+            <div class="btn-group">
+                <input type = "button" class="btn btn-xs btn-default" name = "Button" value = "Polski" onClick = "anchorRotator('pl');">
+                <input type = "button" class="btn btn-xs btn-default" name = "Button" value = "Francuski" onClick = "anchorRotator('fr');">
+                <input type = "button" class="btn btn-xs btn-default" name = "Button" value = "Angielski" onClick = "anchorRotator('eng');">
+                <input type = "button" class="btn btn-xs btn-default" name = "Button" value = "Niemiecki" onClick = "anchorRotator('de');">
+                <input type = "button" class="btn btn-xs btn-default" name = "Button" value = "Czeski" onClick = "anchorRotator('cz');">
+            </div>
+        </form>
+        <div class="checkbox">
+            <label><input type="checkbox" id="checkbox">Wielkie litery</label>
+        </div>
+        <p id = "Error"></p>
+        <img id = "unicorn">
+    </div>
+
+    <div class="col-sm-5">
+        <p class="text-center"><b>Generator linków:</b></p><br>
+        <p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="5"></textarea>
+        <br><p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5"></textarea>
+        <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Generuj" onclick="linkMaker();"><br>
+        <div class="checkbox">
+          <label><input type="checkbox" id="nofollow"  value="">Nofollow</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="50/50" value="">Nofollow 50/50</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" id="spinner" value="">Spinner 1:1</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <br><p class="text-center"><b>Link do skopiowania:</b></p>
+            <textarea class="form-control" id="output" rows="5"></textarea>
+        </div>
+    </div>
+
+</div>
+    
+    
+</div>
+    
+<noscript>
+    Masz wyłączony JavaScript. Program nie zadziała.
+</noscript>
+
+</body>
+</html>

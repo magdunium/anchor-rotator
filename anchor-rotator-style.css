@@ -1,0 +1,21 @@
+#Error{
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+body{
+    background-color: #ffedf6;
+}
+.container{
+    margin-left: 0;
+}
+.jumbotron{
+    background-color: #cc0066;
+    height: 140px;
+    font-family: 'Jura', sans-serif;
+}
+
+p{
+    color: #7a003d;
+}
