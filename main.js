@@ -81,3 +81,10 @@ function linkMaker(){
         urlOutput.value +=   '}</a>';
     }
 }
+
+function anchorCount(){
+    var anchorInput = document.getElementById("anchors");
+    var anchorSplit = anchorInput.value.split('\n');
+    var anchorCountP = document.getElementById("anchorCount");
+    anchorCountP.innerHTML = 'Liczba wpisanych anchorów: ' + anchorSplit.length;
+}

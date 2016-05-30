@@ -11,6 +11,7 @@
 <title>Anchor-Rotator - The Ultimate Rotator | Magdum</title>
 
 </head>
+
 <body onload = "errorHandling('')">
 
     
@@ -52,9 +53,10 @@
     <div class="col-sm-5">
         <p class="text-center"><b>Generator linków:</b></p><br>
         <p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="5"></textarea>
-        <br><p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5"></textarea>
+        <p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5" onkeypress="anchorCount();" ></textarea>
         <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Generuj" onclick="linkMaker();"><br>
-        <p>Liczba wpisanych anchorów: <script type="text/javascript">document.write(anchorOutput.length)</script></p>
+        <p id="anchorCount"></p>
+        
         <div class="checkbox">
           <label><input type="checkbox" id="nofollow"  value="">Nofollow</label>
         </div>
