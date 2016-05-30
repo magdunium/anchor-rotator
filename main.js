@@ -45,7 +45,10 @@ function anchorRotator(lang) {
         if (document.getElementById("checkbox").checked){
             randomElement = randomElement.charAt(0).toUpperCase() + randomElement.slice(1);
         }
-        anchorOutput.value += randomElement + '\n';
+        anchorOutput.value += randomElement;
+        if (i < number - 1){
+             anchorOutput.value += '\n';
+        }
     }
 }
 
