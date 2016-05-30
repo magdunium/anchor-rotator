@@ -61,12 +61,12 @@ function linkMaker(){
     var anchorSplit = anchorInput.value.split('\n');
    
     
-    urlOutput.value = '<a href="{' + urlSplit.join('|') + '}">{' + anchorSplit.join('|') + '}</a>' + '\n';
+    urlOutput.value = '<a href="{' + urlSplit.join('|') + '}">{' + anchorSplit.join('|') + '}</a>';
     if (document.getElementById("nofollow").checked){
-            urlOutput.value = '<a href="{' + urlSplit.join('|') + '}"' + ' rel="nofollow"' + '>{' + anchorSplit.join('|') + '}</a>' + '\n';
+            urlOutput.value = '<a href="{' + urlSplit.join('|') + '}"' + ' rel="nofollow"' + '>{' + anchorSplit.join('|') + '}</a>';
         }
     else if (document.getElementById("50/50").checked){
-        urlOutput.value = '<a href="{' + urlSplit.join('|') + '}"' + ' rel="nofollow|"' + '>{' + anchorSplit.join('|') + '}</a>' + '\n';
+        urlOutput.value = '<a href="{' + urlSplit.join('|') + '}"' + ' {rel="nofollow"|}' + '>{' + anchorSplit.join('|') + '}</a>';
     }
     else if (document.getElementById("spinner").checked){
         var spinNum = Math.min(urlSplit.length, anchorSplit.length);
