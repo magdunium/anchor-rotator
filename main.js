@@ -88,3 +88,13 @@ function anchorCount(){
     var anchorCountP = document.getElementById("anchorCount");
     anchorCountP.innerHTML = 'Liczba wpisanych anchorów: ' + anchorSplit.length;
 }
+
+function clearAllBoxes(){
+    var urlInput = document.getElementById("urls");
+    var anchorInput = document.getElementById("anchors");
+    var urlOutput = document.getElementById("output"); 
+    
+    urlInput.value = '';
+    anchorInput.value = '';
+    urlOutput.value = ''; 
+}

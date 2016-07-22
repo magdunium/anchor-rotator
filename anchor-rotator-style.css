@@ -19,3 +19,7 @@ body{
 p{
     color: #7a003d;
 }
+
+.btn-xs{
+  border: 0;
+}
