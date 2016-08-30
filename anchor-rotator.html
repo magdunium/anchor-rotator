@@ -14,24 +14,22 @@
 
 <body onload = "errorHandling('')">
 
-    
-<div class="jumbotron">
-    <h1 style="margin-left:15px; color:#ffc2e0;">Anchor-Rotator - The Ultimate Rotator</h1>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Liczba anchorów - Polski: <script type="text/javascript">document.write(originalAnchorList.length)</script></p>
-            <p>Liczba anchorów - Francuski: <script type="text/javascript">document.write(frAnchorList.length)</script></p>
-            <p>Liczba anchorów - Angielski: <script type="text/javascript">document.write(engAnchorList.length)</script></p>
-            <p>Liczba anchorów - Niemiecki: <script type="text/javascript">document.write(deAnchorList.length)</script></p>
-            <p>Liczba anchorów - Czeski: <script type="text/javascript">document.write(czAnchorList.length)</script></p><br>
-        </div>
-        
-    </div>
 
-<div class="row">
-    <div class="col-sm-6">
+<div class="jumbotron">
+    <h1>Anchor-Rotator - The Ultimate Rotator</h1>
+</div>
+<div class="container-fluid">
+
+  <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3" style="background-color: #FFEDF6;">
+        <br><p class="text-center"><h2>Liczba dostępnych anchorów:</h2>
+        <br><br><p>Liczba anchorów - Polski: <script type="text/javascript">document.write(originalAnchorList.length)</script></p>
+        <p>Liczba anchorów - Francuski: <script type="text/javascript">document.write(frAnchorList.length)</script></p>
+        <p>Liczba anchorów - Angielski: <script type="text/javascript">document.write(engAnchorList.length)</script></p>
+        <p>Liczba anchorów - Niemiecki: <script type="text/javascript">document.write(deAnchorList.length)</script></p>
+        <p>Liczba anchorów - Czeski: <script type="text/javascript">document.write(czAnchorList.length)</script></p><br>
+
         <p><b>Wpisz liczbę żądanych kombinacji:</b></p>
         <form name = "inputForm">
             <input  name = "inputArea" ></input ><br><br>
@@ -46,41 +44,47 @@
         <div class="checkbox">
             <label><input type="checkbox" id="checkbox">Wielkie litery</label>
         </div>
+
+        <br><p>Anchor półsprzedażowy</p>
+        <form name = "partialMatchForm">
+          <input  id="partialMatch" ></input >
+        </form>
+
         <p id = "Error"></p>
         <img id = "unicorn">
-    </div>
+      </div>
 
-    <div class="col-sm-5">
-        <p class="text-center"><b>Generator linków:</b></p><br>
-        <p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="5"></textarea>
-        <p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5" onkeypress="anchorCount();" ></textarea>
-        <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Generuj" onclick="linkMaker();"><br>
-        <p id="anchorCount"></p>
-        
-        <div class="checkbox">
-          <label><input type="checkbox" id="nofollow"  value="">Nofollow</label>
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox" id="50/50" value="">Nofollow 50/50</label>
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox" id="spinner" value="">Spinner 1:1</label>
-        </div>
-    </div>
+      <div class="col-md-3" style="background-color: #F6BDD9;">
+          <br><p class="text-center"><h2>Generator linków:</h2></p>
+          <br><p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="5"></textarea>
+          <br><p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5" onkeypress="anchorCount();" ></textarea>
+          <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Generuj" onclick="linkMaker();"><br>
+          <p id="anchorCount"></p>
 
-    <div class="row">
-        <div class="col-sm-5">
-            <br><p class="text-center"><b>Link do skopiowania:</b></p>
-            <textarea class="form-control" id="output" rows="5"></textarea>
-            <br><input type="button" class="btn-xs" style="background-color:#ddd;" value="Czyść pola" onclick="clearAllBoxes();"><br>
-        </div>
-    </div>
-    
+          <div class="checkbox">
+            <label><input type="checkbox" id="nofollow"  value="">Nofollow</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" id="50/50" value="">Nofollow 50/50</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" id="spinner" value="">Spinner 1:1</label>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-3" style="background-color: #EA92BD;">
+              <br><p class="text-center"><h2>Link do skopiowania:</h2></p>
+              <br><br><textarea class="form-control" id="output" rows="5"></textarea>
+              <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Czyść pola" onclick="clearAllBoxes();"><br>
+          </div>
+      </div>
+
+  </div>
+
+
 </div>
-    
-    
-</div>
-    
+
 <noscript>
     Masz wyłączony JavaScript. Program nie zadziała.
 </noscript>

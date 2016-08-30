@@ -5,21 +5,40 @@
 }
 
 body{
-    background-color: #ffedf6;
+    background-color: #FCE7F1;
 }
-.container{
+.container-fluid{
     margin-left: 0;
 }
 .jumbotron{
     background-color: #cc0066;
-    height: 140px;
+    height: 120px;
     font-family: 'Jura', sans-serif;
+    padding-top: 10px;
+    text-align: center;
+    color: #ffc2e0;
 }
 
 p{
-    color: #7a003d;
+    color: #572036;
 }
 
 .btn-xs{
   border: 0;
+}
+
+.col-md-3{
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 1000px;
+}
+
+.form-control{
+  margin-top: 10px;
+}
+
+h2{
+  color: #572036;
+  font-size: 18px;
+  text-align: center;
 }

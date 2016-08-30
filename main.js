@@ -11,6 +11,7 @@ function errorHandling (printError) {
 
 function anchorRotator(lang) {
     var userInput = inputForm.inputArea.value;
+    var partialMatch = ' ' + partialMatchForm.partialMatch.value;
     var number = Number(userInput);
     var anchorOutput = document.getElementById('anchors');
 
@@ -36,16 +37,21 @@ function anchorRotator(lang) {
         errorHandling('Błąd: Nie mam tylu anchorów... jeszcze.');
         return;
     }
-    
+
     anchorOutput.value = '';
     for (let i = 0; i < number; i++) {
         var idx = Math.floor(Math.random() * anchorList.length);
         var randomElement = anchorList[idx];
         anchorList.splice(idx, 1);
-        if (document.getElementById("checkbox").checked){
+
+        if ((document.getElementById("checkbox").checked) && (partialMatch != '')){
             randomElement = randomElement.charAt(0).toUpperCase() + randomElement.slice(1);
         }
-        anchorOutput.value += randomElement;
+        else if ((document.getElementById("checkbox").checked) && (partialMatch == '')){
+            randomElement = randomElement.charAt(0).toUpperCase() + randomElement.slice(1);
+        }
+        anchorOutput.value += randomElement + partialMatch;
+
         if (i < number - 1){
              anchorOutput.value += '\n';
         }
@@ -55,12 +61,12 @@ function anchorRotator(lang) {
 function linkMaker(){
     var urlInput = document.getElementById("urls");
     var anchorInput = document.getElementById("anchors");
-    var urlOutput = document.getElementById("output"); 
-  
+    var urlOutput = document.getElementById("output");
+
     var urlSplit = urlInput.value.split('\n');
     var anchorSplit = anchorInput.value.split('\n');
-   
-    
+
+
     urlOutput.value = '<a href="{' + urlSplit.join('|') + '}">{' + anchorSplit.join('|') + '}</a>';
     if (document.getElementById("nofollow").checked){
             urlOutput.value = '<a href="{' + urlSplit.join('|') + '}"' + ' rel="nofollow"' + '>{' + anchorSplit.join('|') + '}</a>';
@@ -70,7 +76,7 @@ function linkMaker(){
     }
     else if (document.getElementById("spinner").checked){
         var spinNum = Math.min(urlSplit.length, anchorSplit.length);
-        
+
         urlOutput.value = '<a href="{';
         for (let i = 0; i < spinNum; i ++){
             urlOutput.value += urlSplit[i] + '">' + anchorSplit[i];
@@ -92,9 +98,11 @@ function anchorCount(){
 function clearAllBoxes(){
     var urlInput = document.getElementById("urls");
     var anchorInput = document.getElementById("anchors");
-    var urlOutput = document.getElementById("output"); 
-    
+    var urlOutput = document.getElementById("output");
+    var partialOutput = document.getElementById('partialMatch');
+
     urlInput.value = '';
     anchorInput.value = '';
-    urlOutput.value = ''; 
+    urlOutput.value = '';
+    partialOutput.value = '';
 }
