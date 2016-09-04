@@ -16,13 +16,12 @@
 
 
 <div class="jumbotron">
-    <h1>Anchor-Rotator - The Ultimate Rotator</h1>
+    <h1>Anchor Rotator - Happy Unicorn</h1>
 </div>
-<div class="container-fluid">
+<div class="container">
 
   <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-3" style="background-color: #FFEDF6;">
+      <div class="col-md-4" style="background-color: #FFEDF6;">
         <br><p class="text-center"><h2>Liczba dostępnych anchorów:</h2>
         <br><br><p>Liczba anchorów - Polski: <script type="text/javascript">document.write(originalAnchorList.length)</script></p>
         <p>Liczba anchorów - Francuski: <script type="text/javascript">document.write(frAnchorList.length)</script></p>
@@ -51,12 +50,12 @@
         </form>
 
         <p id = "Error"></p>
-        <img id = "unicorn">
+        <img id = "unicorn" width="400px;">
       </div>
 
-      <div class="col-md-3" style="background-color: #F6BDD9;">
+      <div class="col-md-4" style="background-color: #F6BDD9;">
           <br><p class="text-center"><h2>Generator linków:</h2></p>
-          <br><p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="5"></textarea>
+          <br><p>Wpisz adresy URL:</p><textarea class="form-control" id = "urls" rows="6"></textarea>
           <br><p>Wpisz anchory:</p><textarea class="form-control" id="anchors" rows="5" onkeypress="anchorCount();" ></textarea>
           <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Generuj" onclick="linkMaker();"><br>
           <p id="anchorCount"></p>
@@ -73,16 +72,21 @@
       </div>
 
       <div class="row">
-          <div class="col-md-3" style="background-color: #EA92BD;">
-              <br><p class="text-center"><h2>Link do skopiowania:</h2></p>
-              <br><br><textarea class="form-control" id="output" rows="5"></textarea>
+          <div class="col-md-4" style="background-color: #EA92BD;">
+              <br><p class="text-center"><h2 style="color:white;">Link do skopiowania:</h2></p>
+              <br><br><textarea class="form-control" id="output" rows="14"></textarea>
               <input type="button" class="btn btn-xs btn-block btn btn-info" style="background-color:#ff47a3;" value="Czyść pola" onclick="clearAllBoxes();"><br>
           </div>
       </div>
 
   </div>
 
+</div>
 
+<div id="footer">
+    <div class="container">
+      <p style="text-align:center;">Anchor Rotator - v3.0 Happy Unicorn</p>
+    </div>
 </div>
 
 <noscript>

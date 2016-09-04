@@ -7,9 +7,7 @@
 body{
     background-color: #FCE7F1;
 }
-.container-fluid{
-    margin-left: 0;
-}
+
 .jumbotron{
     background-color: #cc0066;
     height: 120px;
@@ -27,10 +25,11 @@ p{
   border: 0;
 }
 
-.col-md-3{
+.col-md-4{
   padding-left: 40px;
   padding-right: 40px;
-  height: 1000px;
+  height: 900px;
+  margin-top: -30px;
 }
 
 .form-control{
@@ -38,7 +37,12 @@ p{
 }
 
 h2{
-  color: #572036;
+  color: #CC0066;
   font-size: 18px;
   text-align: center;
+  font-weight: bold;
+}
+.container {
+  width: auto;
+  padding: 0 25px;
 }

@@ -1,3 +1,5 @@
+//Anchor Rotator - v3.0 - Happy Unicorn
+
 function errorHandling (printError) {
     document.getElementById('Error').innerHTML = printError;
 
@@ -11,7 +13,7 @@ function errorHandling (printError) {
 
 function anchorRotator(lang) {
     var userInput = inputForm.inputArea.value;
-    var partialMatch = ' ' + partialMatchForm.partialMatch.value;
+    var partialMatch = partialMatchForm.partialMatch.value;
     var number = Number(userInput);
     var anchorOutput = document.getElementById('anchors');
 
@@ -44,13 +46,16 @@ function anchorRotator(lang) {
         var randomElement = anchorList[idx];
         anchorList.splice(idx, 1);
 
-        if ((document.getElementById("checkbox").checked) && (partialMatch != '')){
+        if (document.getElementById("checkbox").checked){
             randomElement = randomElement.charAt(0).toUpperCase() + randomElement.slice(1);
         }
-        else if ((document.getElementById("checkbox").checked) && (partialMatch == '')){
-            randomElement = randomElement.charAt(0).toUpperCase() + randomElement.slice(1);
+
+        if (partialMatch != ''){
+          anchorOutput.value += randomElement + ' ' + partialMatch;
         }
-        anchorOutput.value += randomElement + partialMatch;
+        else{
+        anchorOutput.value += randomElement;
+        }
 
         if (i < number - 1){
              anchorOutput.value += '\n';
